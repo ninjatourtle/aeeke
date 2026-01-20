@@ -8,27 +8,11 @@ import { Label } from "@/components/ui/label";
 const offices = [
   {
     city: "Санкт-Петербург",
-    address: "Невский пр-т, д. 100, офис 512",
+    address: "пер. Зеленков, д. 7а литер з, помещ. 5-н офис 104",
     phone: "+7 (812) 720-97-67",
-    email: "spb@aoec.ru",
+    email: "info@aoec.ru",
     hours: "Пн-Пт: 9:00 - 18:00",
     isMain: true,
-  },
-  {
-    city: "Москва",
-    address: "ул. Профсоюзная, д. 65, корп. 1, офис 401",
-    phone: "+7 (812) 720-97-67",
-    email: "moscow@aoec.ru",
-    hours: "Пн-Пт: 9:00 - 18:00",
-    isMain: false,
-  },
-  {
-    city: "Новосибирск",
-    address: "ул. Ленина, д. 50, офис 301",
-    phone: "+7 (812) 720-97-67",
-    email: "nsk@aoec.ru",
-    hours: "Пн-Пт: 9:00 - 18:00",
-    isMain: false,
   },
 ];
 
