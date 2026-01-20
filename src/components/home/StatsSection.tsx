@@ -25,7 +25,7 @@ const stats = [
   },
   {
     icon: Calendar,
-    value: 19,
+    value: 8,
     suffix: "",
     label: "лет на рынке",
     description: "Опыт работы",

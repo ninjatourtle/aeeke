@@ -12,12 +12,11 @@ const footerLinks = {
   company: [
     { name: "О компании", href: "/about" },
     { name: "Инвесторам", href: "/investors" },
-    { name: "Сотрудничество", href: "/partnership" },
   ],
   support: [
-    { name: "Условия поставок", href: "/partnership#delivery" },
-    { name: "Оплата", href: "/partnership#payment" },
-    { name: "FAQ", href: "/partnership#faq" },
+    { name: "Условия поставок", href: "/contacts" },
+    { name: "Оплата", href: "/contacts" },
+    { name: "FAQ", href: "/contacts" },
     { name: "Контакты", href: "/contacts" },
   ],
 };
@@ -45,7 +44,7 @@ export function Footer() {
             </Link>
             <p className="text-muted-foreground mb-6 max-w-sm">
               Надёжный поставщик качественных нефтепродуктов для вашего бизнеса.
-              Работаем с 2005 года по всей России.
+              Работаем с 2018 года по всей России.
             </p>
 
             {/* Newsletter */}
