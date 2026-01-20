@@ -124,13 +124,13 @@ export function Footer() {
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
                   <Mail className="w-4 h-4 text-primary shrink-0" />
-                  info@energy-const.ru
+                  info@aoec.ru
                 </a>
               </li>
               <li>
                 <div className="flex items-start gap-3 text-muted-foreground text-sm">
                   <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                  <span>г. Москва, ул. Нефтяная, д. 15, офис 301</span>
+                  <span>Санкт-Петербург, пер. Зеленков, д. 7а литер з, помещ. 5-н офис 104</span>
                 </div>
               </li>
             </ul>
