@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
-import { Fuel, Flame, Plane, CheckCircle, Thermometer, Droplets, Gauge, Shield, Award, Truck } from "lucide-react";
+import { Fuel, Flame, Plane, CheckCircle, Thermometer, Droplets, Gauge, Shield, Award, Truck, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RequestModal } from "@/components/RequestModal";
 
 const dieselProducts = [
   {
@@ -389,12 +390,21 @@ const Products = () => {
               Наши специалисты помогут подобрать оптимальное топливо для ваших задач и рассчитают стоимость поставки
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="gradient-orange text-white font-semibold glow-orange">
-                Получить консультацию
-              </Button>
-              <Button size="lg" variant="outline" className="border-border hover:border-primary">
-                +7 (812) 720-97-67
-              </Button>
+              <RequestModal
+                title="Получить консультацию"
+                description="Оставьте заявку, и наши специалисты свяжутся с вами для консультации"
+                trigger={
+                  <Button size="lg" className="gradient-orange text-white font-semibold glow-orange">
+                    Получить консультацию
+                  </Button>
+                }
+              />
+              <a href="tel:+78127209767">
+                <Button size="lg" variant="outline" className="border-border hover:border-primary">
+                  <Phone className="w-4 h-4 mr-2" />
+                  +7 (812) 720-97-67
+                </Button>
+              </a>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Plane, CheckCircle, Thermometer, Droplets, ArrowLeft, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RequestModal } from "@/components/RequestModal";
 
 const keroseneProducts = [
   {
@@ -179,13 +180,21 @@ const ProductKerosene = () => {
               Свяжитесь с нами для расчёта стоимости и условий поставки
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="gradient-orange text-white font-semibold glow-orange">
-                Оставить заявку
-              </Button>
-              <Button size="lg" variant="outline" className="border-border hover:border-primary">
-                <Phone className="w-4 h-4 mr-2" />
-                +7 (812) 720-97-67
-              </Button>
+              <RequestModal
+                title="Заказать авиационный керосин"
+                description="Оставьте заявку, и мы рассчитаем стоимость поставки"
+                trigger={
+                  <Button size="lg" className="gradient-orange text-white font-semibold glow-orange">
+                    Оставить заявку
+                  </Button>
+                }
+              />
+              <a href="tel:+78127209767">
+                <Button size="lg" variant="outline" className="border-border hover:border-primary">
+                  <Phone className="w-4 h-4 mr-2" />
+                  +7 (812) 720-97-67
+                </Button>
+              </a>
             </div>
           </div>
         </div>

@@ -9,6 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
+import { RequestModal } from "@/components/RequestModal";
 
 const navigation = [
   { name: "Главная", href: "/" },
@@ -112,9 +113,13 @@ export function Header() {
               <Phone className="w-4 h-4" />
               <span>+7 (812) 720-97-67</span>
             </a>
-            <Button className="gradient-orange text-white font-semibold hover:opacity-90 transition-opacity">
-              Оставить заявку
-            </Button>
+            <RequestModal
+              trigger={
+                <Button className="gradient-orange text-white font-semibold hover:opacity-90 transition-opacity">
+                  Оставить заявку
+                </Button>
+              }
+            />
           </div>
 
           {/* Mobile menu button */}
@@ -171,9 +176,13 @@ export function Header() {
                 )
               )}
               <div className="pt-4 mt-4 border-t border-border">
-                <Button className="w-full gradient-orange text-white font-semibold">
-                  Оставить заявку
-                </Button>
+                <RequestModal
+                  trigger={
+                    <Button className="w-full gradient-orange text-white font-semibold">
+                      Оставить заявку
+                    </Button>
+                  }
+                />
               </div>
             </div>
           </div>
