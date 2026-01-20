@@ -54,7 +54,7 @@ export function AdvantagesSection() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Почему выбирают{" "}
-            <span className="text-gradient-gold">нас</span>
+            <span className="text-primary">нас</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Мы понимаем потребности бизнеса и предлагаем решения, которые
