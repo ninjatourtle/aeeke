@@ -1,0 +1,198 @@
+import { Layout } from "@/components/layout/Layout";
+import { Shield, Target, Eye, Users, Award, Building2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const team = [
+  {
+    name: "Александр Петров",
+    position: "Генеральный директор",
+    description: "20+ лет опыта в нефтегазовой отрасли",
+  },
+  {
+    name: "Елена Козлова",
+    position: "Финансовый директор",
+    description: "Эксперт в области корпоративных финансов",
+  },
+  {
+    name: "Михаил Сидоров",
+    position: "Коммерческий директор",
+    description: "Специалист по развитию B2B продаж",
+  },
+  {
+    name: "Ольга Новикова",
+    position: "Директор по логистике",
+    description: "Оптимизация поставок по всей России",
+  },
+];
+
+const certificates = [
+  "ISO 9001:2015 — Система менеджмента качества",
+  "ISO 14001:2015 — Экологический менеджмент",
+  "ГОСТ Р ИСО 45001-2020 — Охрана труда",
+  "Лицензия на оптовую торговлю нефтепродуктами",
+];
+
+const milestones = [
+  { year: "2005", event: "Основание компании" },
+  { year: "2008", event: "Открытие первого регионального филиала" },
+  { year: "2012", event: "Выход на рынок авиационного топлива" },
+  { year: "2015", event: "Достижение объёма 100 000 тонн/год" },
+  { year: "2018", event: "Расширение географии до 30 регионов" },
+  { year: "2024", event: "500 000+ тонн топлива в год" },
+];
+
+const About = () => {
+  return (
+    <Layout>
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-gradient-to-b from-navy-dark to-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
+              <Building2 className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-primary">О компании</span>
+            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+              Энерджи Констракшн — надёжный партнёр в мире <span className="text-primary">нефтепродуктов</span>
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-2xl">
+              С 2005 года мы обеспечиваем российский бизнес качественным топливом, 
+              выстраивая долгосрочные партнёрские отношения на основе доверия и профессионализма.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Values */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="p-8 rounded-2xl bg-card border border-border">
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                <Target className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">Миссия</h3>
+              <p className="text-muted-foreground">
+                Обеспечивать бесперебойные поставки качественных нефтепродуктов, 
+                способствуя развитию российской экономики.
+              </p>
+            </div>
+            <div className="p-8 rounded-2xl bg-card border border-border">
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                <Eye className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">Видение</h3>
+              <p className="text-muted-foreground">
+                Стать ведущим поставщиком топлива в России, задавая стандарты 
+                качества и сервиса в отрасли.
+              </p>
+            </div>
+            <div className="p-8 rounded-2xl bg-card border border-border">
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                <Shield className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">Ценности</h3>
+              <p className="text-muted-foreground">
+                Надёжность, прозрачность, ответственность и постоянное 
+                стремление к совершенству.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* History Timeline */}
+      <section className="py-20 bg-secondary/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-center mb-16">
+            История <span className="text-primary">развития</span>
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-border" />
+              {milestones.map((milestone, index) => (
+                <div
+                  key={milestone.year}
+                  className={`relative flex items-center gap-8 mb-8 ${
+                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  }`}
+                >
+                  <div className={`flex-1 ${index % 2 === 0 ? "md:text-right" : "md:text-left"} pl-12 md:pl-0`}>
+                    <div className="text-2xl font-bold text-primary">{milestone.year}</div>
+                    <p className="text-muted-foreground">{milestone.event}</p>
+                  </div>
+                  <div className="absolute left-4 md:left-1/2 w-3 h-3 rounded-full bg-primary -translate-x-1/2" />
+                  <div className="flex-1 hidden md:block" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Руководство <span className="text-primary">компании</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Команда профессионалов с многолетним опытом в нефтегазовой отрасли
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {team.map((member) => (
+              <div key={member.name} className="p-6 rounded-2xl bg-card border border-border text-center card-hover">
+                <div className="w-24 h-24 rounded-full bg-secondary mx-auto mb-4 flex items-center justify-center">
+                  <Users className="w-12 h-12 text-muted-foreground" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-1">{member.name}</h3>
+                <p className="text-sm text-primary mb-2">{member.position}</p>
+                <p className="text-sm text-muted-foreground">{member.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certificates */}
+      <section className="py-20 bg-secondary/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Сертификаты и <span className="text-primary">лицензии</span>
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {certificates.map((cert) => (
+              <div key={cert} className="flex items-center gap-4 p-6 rounded-xl bg-card border border-border">
+                <Award className="w-8 h-8 text-primary flex-shrink-0" />
+                <span className="text-foreground">{cert}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              Готовы к сотрудничеству?
+            </h2>
+            <p className="text-muted-foreground mb-8">
+              Свяжитесь с нами для обсуждения условий поставок
+            </p>
+            <Button size="lg" className="gradient-gold text-navy-dark font-semibold">
+              Связаться с нами
+            </Button>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default About;
