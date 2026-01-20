@@ -157,7 +157,7 @@ const Investors = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="gradient-orange text-white font-semibold glow-orange">
-                ir@energyconstruction.ru
+                ir@aoec.ru
               </Button>
               <Button size="lg" variant="outline" className="border-border hover:border-primary">
                 +7 (812) 720-97-67

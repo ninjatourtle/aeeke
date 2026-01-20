@@ -47,10 +47,10 @@ export function ContactSection() {
                     Бесплатная линия
                   </div>
                   <a
-                    href="tel:+78001234567"
+                    href="tel:+78127209767"
                     className="text-lg font-semibold text-foreground hover:text-primary transition-colors"
                   >
-                    8 800 123-45-67
+                    +7 (812) 720-97-67
                   </a>
                 </div>
               </div>
@@ -62,10 +62,10 @@ export function ContactSection() {
                 <div>
                   <div className="text-sm text-muted-foreground">Email</div>
                   <a
-                    href="mailto:sales@energy-const.ru"
+                    href="mailto:sales@aoec.ru"
                     className="text-lg font-semibold text-foreground hover:text-primary transition-colors"
                   >
-                    sales@energy-const.ru
+                    sales@aoec.ru
                   </a>
                 </div>
               </div>

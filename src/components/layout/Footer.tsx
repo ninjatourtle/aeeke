@@ -12,7 +12,6 @@ const footerLinks = {
   company: [
     { name: "О компании", href: "/about" },
     { name: "Инвесторам", href: "/investors" },
-    { name: "Карьера", href: "/career" },
     { name: "Сотрудничество", href: "/partnership" },
   ],
   support: [
@@ -113,16 +112,16 @@ export function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="tel:+78001234567"
+                  href="tel:+78127209767"
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
                   <Phone className="w-4 h-4 text-primary shrink-0" />
-                  8 800 123-45-67
+                  +7 (812) 720-97-67
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@energy-const.ru"
+                  href="mailto:info@aoec.ru"
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
                   <Mail className="w-4 h-4 text-primary shrink-0" />
