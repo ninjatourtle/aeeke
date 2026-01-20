@@ -7,18 +7,18 @@ import { Label } from "@/components/ui/label";
 
 const offices = [
   {
-    city: "Москва",
-    address: "ул. Профсоюзная, д. 65, корп. 1, офис 401",
-    phone: "+7 (495) 123-45-67",
-    email: "moscow@energyconstruction.ru",
+    city: "Санкт-Петербург",
+    address: "Невский пр-т, д. 100, офис 512",
+    phone: "+7 (812) 720-97-67",
+    email: "spb@energyconstruction.ru",
     hours: "Пн-Пт: 9:00 - 18:00",
     isMain: true,
   },
   {
-    city: "Санкт-Петербург",
-    address: "Невский пр-т, д. 100, офис 512",
-    phone: "+7 (812) 123-45-67",
-    email: "spb@energyconstruction.ru",
+    city: "Москва",
+    address: "ул. Профсоюзная, д. 65, корп. 1, офис 401",
+    phone: "+7 (495) 123-45-67",
+    email: "moscow@energyconstruction.ru",
     hours: "Пн-Пт: 9:00 - 18:00",
     isMain: false,
   },
@@ -47,10 +47,10 @@ const Contacts = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-navy-dark to-background">
+      <section className="pt-32 pb-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 mb-8">
               <Phone className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-primary">Контакты</span>
             </div>
@@ -66,17 +66,17 @@ const Contacts = () => {
       </section>
 
       {/* Hotline */}
-      <section className="py-12 border-b border-border">
+      <section className="py-12 border-b border-border section-dark-3">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-full gradient-gold flex items-center justify-center">
-                <Phone className="w-7 h-7 text-navy-dark" />
+              <div className="w-14 h-14 rounded-full gradient-orange flex items-center justify-center glow-orange">
+                <Phone className="w-7 h-7 text-white" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">Горячая линия (бесплатно по России)</p>
-                <a href="tel:88001234567" className="text-2xl font-bold text-foreground hover:text-primary transition-colors">
-                  8 800 123-45-67
+                <p className="text-sm text-muted-foreground">Основной телефон</p>
+                <a href="tel:+78127209767" className="text-2xl font-bold text-foreground hover:text-primary transition-colors">
+                  +7 (812) 720-97-67
                 </a>
               </div>
             </div>
@@ -89,7 +89,7 @@ const Contacts = () => {
       </section>
 
       {/* Offices */}
-      <section className="py-20">
+      <section className="py-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-center mb-12">
             Наши <span className="text-primary">офисы</span>
@@ -98,12 +98,12 @@ const Contacts = () => {
             {offices.map((office) => (
               <div
                 key={office.city}
-                className={`p-6 rounded-2xl border ${
-                  office.isMain ? "bg-card border-primary/30" : "bg-card border-border"
+                className={`p-6 rounded-2xl border backdrop-blur-sm ${
+                  office.isMain ? "bg-card/80 border-primary/40" : "bg-card/80 border-border"
                 }`}
               >
                 {office.isMain && (
-                  <span className="inline-block px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full mb-4">
+                  <span className="inline-block px-3 py-1 text-xs font-medium bg-primary/15 text-primary rounded-full mb-4">
                     Головной офис
                   </span>
                 )}
@@ -137,7 +137,7 @@ const Contacts = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 section-dark-3">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-center mb-4">
@@ -150,28 +150,28 @@ const Contacts = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Имя *</Label>
-                  <Input id="name" placeholder="Ваше имя" />
+                  <Input id="name" placeholder="Ваше имя" className="bg-secondary/30 border-border focus:border-primary" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="company">Компания</Label>
-                  <Input id="company" placeholder="Название компании" />
+                  <Input id="company" placeholder="Название компании" className="bg-secondary/30 border-border focus:border-primary" />
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="phone">Телефон *</Label>
-                  <Input id="phone" type="tel" placeholder="+7 (___) ___-__-__" />
+                  <Input id="phone" type="tel" placeholder="+7 (___) ___-__-__" className="bg-secondary/30 border-border focus:border-primary" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="email@example.com" />
+                  <Input id="email" type="email" placeholder="email@example.com" className="bg-secondary/30 border-border focus:border-primary" />
                 </div>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="message">Сообщение *</Label>
-                <Textarea id="message" placeholder="Опишите ваш вопрос или запрос..." rows={5} />
+                <Textarea id="message" placeholder="Опишите ваш вопрос или запрос..." rows={5} className="bg-secondary/30 border-border focus:border-primary resize-none" />
               </div>
-              <Button type="submit" size="lg" className="w-full gradient-gold text-navy-dark font-semibold">
+              <Button type="submit" size="lg" className="w-full gradient-orange text-white font-semibold glow-orange">
                 <Send className="w-4 h-4 mr-2" />
                 Отправить сообщение
               </Button>
@@ -184,18 +184,18 @@ const Contacts = () => {
       </section>
 
       {/* Requisites */}
-      <section className="py-20">
+      <section className="py-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-xl bg-primary/15 flex items-center justify-center">
                 <Building2 className="w-7 h-7 text-primary" />
               </div>
               <h2 className="text-3xl font-bold text-foreground">
                 Реквизиты <span className="text-primary">компании</span>
               </h2>
             </div>
-            <div className="p-6 rounded-xl bg-card border border-border">
+            <div className="p-6 rounded-xl bg-card/80 backdrop-blur-sm border border-border">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                 <div>
                   <p className="text-muted-foreground">Наименование</p>

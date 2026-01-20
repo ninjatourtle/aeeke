@@ -1,5 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
-import { Handshake, Truck, CreditCard, FileText, HelpCircle, ChevronDown, CheckCircle } from "lucide-react";
+import { Handshake, Truck, CreditCard, FileText, HelpCircle, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -41,7 +41,7 @@ const faq = [
   },
   {
     question: "Как оформить заявку на поставку?",
-    answer: "Заявку можно оформить через форму на сайте, по телефону 8 800 123-45-67 или по email info@energyconstruction.ru. Мы свяжемся с вами в течение 1 часа в рабочее время.",
+    answer: "Заявку можно оформить через форму на сайте, по телефону +7 (812) 720-97-67 или по email info@energyconstruction.ru. Мы свяжемся с вами в течение 1 часа в рабочее время.",
   },
   {
     question: "Есть ли скидки для постоянных клиентов?",
@@ -57,10 +57,10 @@ const Partnership = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-navy-dark to-background">
+      <section className="pt-32 pb-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 mb-8">
               <Handshake className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-primary">Сотрудничество</span>
             </div>
@@ -76,7 +76,7 @@ const Partnership = () => {
       </section>
 
       {/* Delivery Options */}
-      <section className="py-20">
+      <section className="py-20 section-dark-3">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-center mb-12">
             Способы <span className="text-primary">доставки</span>
@@ -85,9 +85,9 @@ const Partnership = () => {
             {deliveryOptions.map((option) => {
               const Icon = option.icon;
               return (
-                <div key={option.title} className="p-8 rounded-2xl bg-card border border-border">
-                  <div className="w-14 h-14 rounded-xl gradient-gold flex items-center justify-center mb-6">
-                    <Icon className="w-7 h-7 text-navy-dark" />
+                <div key={option.title} className="p-8 rounded-2xl bg-card/80 backdrop-blur-sm border border-border">
+                  <div className="w-14 h-14 rounded-xl gradient-orange flex items-center justify-center mb-6 glow-orange">
+                    <Icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground mb-3">{option.title}</h3>
                   <p className="text-muted-foreground mb-6">{option.description}</p>
@@ -107,11 +107,11 @@ const Partnership = () => {
       </section>
 
       {/* Payment Methods */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-xl bg-primary/15 flex items-center justify-center">
                 <CreditCard className="w-7 h-7 text-primary" />
               </div>
               <h2 className="text-3xl font-bold text-foreground">
@@ -120,7 +120,7 @@ const Partnership = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {paymentMethods.map((method) => (
-                <div key={method} className="flex items-center gap-3 p-4 rounded-xl bg-card border border-border">
+                <div key={method} className="flex items-center gap-3 p-4 rounded-xl bg-card/80 backdrop-blur-sm border border-border">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
                   <span className="text-foreground">{method}</span>
                 </div>
@@ -131,18 +131,18 @@ const Partnership = () => {
       </section>
 
       {/* Documents */}
-      <section className="py-20">
+      <section className="py-20 section-dark-3">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-xl bg-primary/15 flex items-center justify-center">
                 <FileText className="w-7 h-7 text-primary" />
               </div>
               <h2 className="text-3xl font-bold text-foreground">
                 Документы для <span className="text-primary">начала работы</span>
               </h2>
             </div>
-            <div className="p-6 rounded-xl bg-card border border-border">
+            <div className="p-6 rounded-xl bg-card/80 backdrop-blur-sm border border-border">
               <ul className="space-y-3">
                 {[
                   "Заявка на заключение договора",
@@ -163,11 +163,11 @@ const Partnership = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-xl bg-primary/15 flex items-center justify-center">
                 <HelpCircle className="w-7 h-7 text-primary" />
               </div>
               <h2 className="text-3xl font-bold text-foreground">
@@ -179,7 +179,7 @@ const Partnership = () => {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="bg-card border border-border rounded-xl px-6"
+                  className="bg-card/80 backdrop-blur-sm border border-border rounded-xl px-6"
                 >
                   <AccordionTrigger className="text-left text-foreground hover:no-underline">
                     {item.question}
@@ -195,7 +195,7 @@ const Partnership = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20">
+      <section className="py-20 section-dark-3">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -204,7 +204,7 @@ const Partnership = () => {
             <p className="text-muted-foreground mb-8">
               Оставьте заявку, и наш менеджер свяжется с вами для обсуждения условий
             </p>
-            <Button size="lg" className="gradient-gold text-navy-dark font-semibold">
+            <Button size="lg" className="gradient-orange text-white font-semibold glow-orange">
               Оставить заявку
             </Button>
           </div>
