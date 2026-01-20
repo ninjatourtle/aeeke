@@ -44,8 +44,8 @@ export function Header() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-lg gradient-gold flex items-center justify-center shadow-lg group-hover:shadow-gold/30 transition-shadow">
-              <Fuel className="w-7 h-7 text-navy-dark" />
+            <div className="w-12 h-12 rounded-lg gradient-orange flex items-center justify-center shadow-lg glow-orange group-hover:scale-105 transition-transform">
+              <Fuel className="w-7 h-7 text-white" />
             </div>
             <div className="hidden sm:block">
               <div className="text-lg font-bold text-foreground tracking-tight">
@@ -108,13 +108,13 @@ export function Header() {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:+78001234567"
+              href="tel:+78127209767"
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span>8 800 123-45-67</span>
+              <span>+7 (812) 720-97-67</span>
             </a>
-            <Button className="gradient-gold text-navy-dark font-semibold hover:opacity-90 transition-opacity">
+            <Button className="gradient-orange text-white font-semibold hover:opacity-90 transition-opacity">
               Оставить заявку
             </Button>
           </div>
@@ -173,7 +173,7 @@ export function Header() {
                 )
               )}
               <div className="pt-4 mt-4 border-t border-border">
-                <Button className="w-full gradient-gold text-navy-dark font-semibold">
+                <Button className="w-full gradient-orange text-white font-semibold">
                   Оставить заявку
                 </Button>
               </div>

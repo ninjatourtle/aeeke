@@ -40,10 +40,10 @@ const Investors = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-navy-dark to-background">
+      <section className="pt-32 pb-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 mb-8">
               <TrendingUp className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-primary">Инвесторам</span>
             </div>
@@ -59,14 +59,14 @@ const Investors = () => {
       </section>
 
       {/* Key Financials */}
-      <section className="py-20">
+      <section className="py-20 section-dark-3">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-center mb-12">
             Ключевые <span className="text-primary">показатели</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {financials.map((item) => (
-              <div key={item.label} className="p-6 rounded-2xl bg-card border border-border text-center">
+              <div key={item.label} className="p-6 rounded-2xl bg-card/80 backdrop-blur-sm border border-border text-center">
                 <div className="text-3xl font-bold text-foreground mb-2">{item.value}</div>
                 <p className="text-muted-foreground mb-2">{item.label}</p>
                 <span className="inline-flex items-center gap-1 text-sm font-medium text-green-500">
@@ -80,7 +80,7 @@ const Investors = () => {
       </section>
 
       {/* Reports Download */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12">
             <div>
@@ -96,10 +96,10 @@ const Investors = () => {
             {reports.map((report) => (
               <div
                 key={report.title}
-                className="flex items-center justify-between p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-colors"
+                className="flex items-center justify-between p-6 rounded-xl bg-card/80 backdrop-blur-sm border border-border hover:border-primary/40 transition-colors"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-lg bg-primary/15 flex items-center justify-center">
                     <FileText className="w-6 h-6 text-primary" />
                   </div>
                   <div>
@@ -110,7 +110,7 @@ const Investors = () => {
                     </div>
                   </div>
                 </div>
-                <Button variant="outline" size="sm">
+                <Button variant="outline" size="sm" className="border-border hover:border-primary">
                   <Download className="w-4 h-4 mr-2" />
                   {report.type}
                 </Button>
@@ -121,16 +121,16 @@ const Investors = () => {
       </section>
 
       {/* Corporate Governance */}
-      <section className="py-20">
+      <section className="py-20 section-dark-3">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-center mb-12">
             Корпоративное <span className="text-primary">управление</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {governance.map((item) => (
-              <div key={item.title} className="p-6 rounded-xl bg-card border border-border">
+              <div key={item.title} className="p-6 rounded-xl bg-card/80 backdrop-blur-sm border border-border">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
                     <Building className="w-5 h-5 text-primary" />
                   </div>
                   <div>
@@ -145,7 +145,7 @@ const Investors = () => {
       </section>
 
       {/* Investor Contact */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
             <BarChart3 className="w-12 h-12 text-primary mx-auto mb-6" />
@@ -156,11 +156,11 @@ const Investors = () => {
               По вопросам инвестиций и финансовой отчётности обращайтесь в отдел по работе с инвесторами
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="gradient-gold text-navy-dark font-semibold">
+              <Button size="lg" className="gradient-orange text-white font-semibold glow-orange">
                 ir@energyconstruction.ru
               </Button>
-              <Button size="lg" variant="outline">
-                +7 (495) 123-45-67
+              <Button size="lg" variant="outline" className="border-border hover:border-primary">
+                +7 (812) 720-97-67
               </Button>
             </div>
           </div>

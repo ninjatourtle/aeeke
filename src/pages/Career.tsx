@@ -57,10 +57,10 @@ const Career = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-navy-dark to-background">
+      <section className="pt-32 pb-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 mb-8">
               <Briefcase className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-primary">Карьера</span>
             </div>
@@ -76,7 +76,7 @@ const Career = () => {
       </section>
 
       {/* Stats */}
-      <section className="py-12 border-b border-border">
+      <section className="py-12 border-b border-border section-dark-3">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
@@ -100,7 +100,7 @@ const Career = () => {
       </section>
 
       {/* Benefits */}
-      <section className="py-20">
+      <section className="py-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-center mb-12">
             Почему <span className="text-primary">работать</span> у нас
@@ -109,8 +109,8 @@ const Career = () => {
             {benefits.map((benefit) => {
               const Icon = benefit.icon;
               return (
-                <div key={benefit.title} className="p-6 rounded-xl bg-card border border-border text-center card-hover">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <div key={benefit.title} className="p-6 rounded-xl bg-card/80 backdrop-blur-sm border border-border text-center card-hover">
+                  <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="font-semibold text-foreground mb-2">{benefit.title}</h3>
@@ -123,7 +123,7 @@ const Career = () => {
       </section>
 
       {/* Vacancies */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 section-dark-3">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-center mb-12">
             Открытые <span className="text-primary">вакансии</span>
@@ -132,13 +132,13 @@ const Career = () => {
             {vacancies.map((vacancy) => (
               <div
                 key={vacancy.id}
-                className="p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-colors"
+                className="p-6 rounded-xl bg-card/80 backdrop-blur-sm border border-border hover:border-primary/40 transition-colors"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                   <div>
                     <h3 className="text-lg font-semibold text-foreground mb-2">{vacancy.title}</h3>
                     <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-                      <Badge variant="outline">{vacancy.department}</Badge>
+                      <Badge variant="outline" className="border-border">{vacancy.department}</Badge>
                       <span className="flex items-center gap-1">
                         <MapPin className="w-4 h-4" />
                         {vacancy.location}
@@ -151,7 +151,7 @@ const Career = () => {
                   </div>
                   <div className="flex items-center gap-4">
                     <span className="font-semibold text-primary">{vacancy.salary}</span>
-                    <Button className="gradient-gold text-navy-dark font-semibold">
+                    <Button className="gradient-orange text-white font-semibold">
                       Откликнуться
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
@@ -164,7 +164,7 @@ const Career = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20">
+      <section className="py-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto">
             <Users className="w-12 h-12 text-primary mx-auto mb-6" />
@@ -174,7 +174,7 @@ const Career = () => {
             <p className="text-muted-foreground mb-8">
               Отправьте своё резюме, и мы свяжемся с вами, когда появится подходящая позиция
             </p>
-            <Button size="lg" className="gradient-gold text-navy-dark font-semibold">
+            <Button size="lg" className="gradient-orange text-white font-semibold glow-orange">
               Отправить резюме
             </Button>
           </div>

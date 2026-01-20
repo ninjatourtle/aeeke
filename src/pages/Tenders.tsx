@@ -63,10 +63,10 @@ const Tenders = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-navy-dark to-background">
+      <section className="pt-32 pb-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 mb-8">
               <FileCheck className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-primary">Тендеры</span>
             </div>
@@ -82,7 +82,7 @@ const Tenders = () => {
       </section>
 
       {/* Stats */}
-      <section className="py-12 border-b border-border">
+      <section className="py-12 border-b border-border section-dark-3">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat) => (
@@ -96,17 +96,17 @@ const Tenders = () => {
       </section>
 
       {/* Search & Filter */}
-      <section className="py-8 bg-secondary/30">
+      <section className="py-8 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="relative flex-grow">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
               <Input 
                 placeholder="Поиск по тендерам..." 
-                className="pl-10 bg-background"
+                className="pl-10 bg-secondary/30 border-border focus:border-primary"
               />
             </div>
-            <Button variant="outline" className="flex items-center gap-2">
+            <Button variant="outline" className="flex items-center gap-2 border-border hover:border-primary">
               <Filter className="w-4 h-4" />
               Фильтры
             </Button>
@@ -115,7 +115,7 @@ const Tenders = () => {
       </section>
 
       {/* Tenders List */}
-      <section className="py-12">
+      <section className="py-12 section-dark-3">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-foreground mb-8">
             Открытые тендеры
@@ -124,7 +124,7 @@ const Tenders = () => {
             {tenders.map((tender) => (
               <div
                 key={tender.id}
-                className="p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-colors"
+                className="p-6 rounded-xl bg-card/80 backdrop-blur-sm border border-border hover:border-primary/40 transition-colors"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                   <div className="flex-grow">
@@ -132,11 +132,11 @@ const Tenders = () => {
                       <span className="text-sm text-muted-foreground font-mono">{tender.id}</span>
                       <Badge 
                         variant={tender.status === "active" ? "default" : "secondary"}
-                        className={tender.status === "active" ? "bg-green-500/10 text-green-500 border-green-500/20" : ""}
+                        className={tender.status === "active" ? "bg-green-500/15 text-green-500 border-green-500/30" : ""}
                       >
                         {tender.status === "active" ? "Активен" : "Завершён"}
                       </Badge>
-                      <Badge variant="outline">{tender.category}</Badge>
+                      <Badge variant="outline" className="border-border">{tender.category}</Badge>
                     </div>
                     <h3 className="text-lg font-semibold text-foreground mb-3">{tender.title}</h3>
                     <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
@@ -155,7 +155,7 @@ const Tenders = () => {
                     </div>
                   </div>
                   {tender.status === "active" && (
-                    <Button className="gradient-gold text-navy-dark font-semibold whitespace-nowrap">
+                    <Button className="gradient-orange text-white font-semibold whitespace-nowrap">
                       Подать заявку
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
@@ -168,7 +168,7 @@ const Tenders = () => {
       </section>
 
       {/* How to Participate */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-center mb-12">
             Как <span className="text-primary">участвовать</span>
@@ -181,7 +181,7 @@ const Tenders = () => {
               { step: "4", title: "Участие", description: "Следите за результатами" },
             ].map((item) => (
               <div key={item.step} className="text-center">
-                <div className="w-12 h-12 rounded-full gradient-gold text-navy-dark font-bold text-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 rounded-full gradient-orange text-white font-bold text-xl flex items-center justify-center mx-auto mb-4 glow-orange">
                   {item.step}
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
@@ -193,7 +193,7 @@ const Tenders = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20">
+      <section className="py-20 section-dark-3">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -202,7 +202,7 @@ const Tenders = () => {
             <p className="text-muted-foreground mb-8">
               Свяжитесь с отделом закупок для получения консультации
             </p>
-            <Button size="lg" className="gradient-gold text-navy-dark font-semibold">
+            <Button size="lg" className="gradient-orange text-white font-semibold glow-orange">
               Связаться с отделом закупок
             </Button>
           </div>

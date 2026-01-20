@@ -34,10 +34,10 @@ const Products = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-navy-dark to-background">
+      <section className="pt-32 pb-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 mb-8">
               <Fuel className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-primary">Каталог продукции</span>
             </div>
@@ -53,7 +53,7 @@ const Products = () => {
       </section>
 
       {/* Products Grid */}
-      <section className="py-20">
+      <section className="py-20 section-dark-3">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {products.map((product) => {
@@ -61,10 +61,10 @@ const Products = () => {
               return (
                 <div
                   key={product.id}
-                  className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 card-hover flex flex-col"
+                  className="group p-8 rounded-2xl bg-card/80 backdrop-blur-sm border border-border hover:border-primary/40 transition-all duration-300 card-hover flex flex-col"
                 >
-                  <div className="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center mb-6">
-                    <Icon className="w-8 h-8 text-navy-dark" />
+                  <div className="w-16 h-16 rounded-xl gradient-orange flex items-center justify-center mb-6 glow-orange">
+                    <Icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-foreground mb-4">{product.title}</h3>
                   <p className="text-muted-foreground mb-6 flex-grow">{product.description}</p>
@@ -77,7 +77,7 @@ const Products = () => {
                     ))}
                   </ul>
                   <Link to={product.href}>
-                    <Button variant="outline" className="w-full group-hover:border-primary group-hover:text-primary">
+                    <Button variant="outline" className="w-full border-border hover:border-primary hover:text-primary">
                       Подробнее
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -90,7 +90,7 @@ const Products = () => {
       </section>
 
       {/* Quality Guarantee */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
@@ -101,15 +101,15 @@ const Products = () => {
               Мы предоставляем паспорт качества на всю продукцию.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="p-6 rounded-xl bg-card border border-border">
+              <div className="p-6 rounded-xl bg-card/80 backdrop-blur-sm border border-border">
                 <div className="text-3xl font-bold text-primary mb-2">100%</div>
                 <p className="text-muted-foreground">Соответствие ГОСТ</p>
               </div>
-              <div className="p-6 rounded-xl bg-card border border-border">
+              <div className="p-6 rounded-xl bg-card/80 backdrop-blur-sm border border-border">
                 <div className="text-3xl font-bold text-primary mb-2">24ч</div>
                 <p className="text-muted-foreground">Экспресс-анализ</p>
               </div>
-              <div className="p-6 rounded-xl bg-card border border-border">
+              <div className="p-6 rounded-xl bg-card/80 backdrop-blur-sm border border-border">
                 <div className="text-3xl font-bold text-primary mb-2">0</div>
                 <p className="text-muted-foreground">Рекламаций за год</p>
               </div>
@@ -119,7 +119,7 @@ const Products = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20">
+      <section className="py-20 section-dark-3">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -128,7 +128,7 @@ const Products = () => {
             <p className="text-muted-foreground mb-8">
               Наши специалисты помогут подобрать оптимальное топливо для ваших задач
             </p>
-            <Button size="lg" className="gradient-gold text-navy-dark font-semibold">
+            <Button size="lg" className="gradient-orange text-white font-semibold glow-orange">
               Получить консультацию
             </Button>
           </div>

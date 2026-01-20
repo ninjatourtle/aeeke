@@ -45,10 +45,10 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-navy-dark to-background">
+      <section className="pt-32 pb-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 mb-8">
               <Building2 className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-primary">О компании</span>
             </div>
@@ -64,11 +64,11 @@ const About = () => {
       </section>
 
       {/* Mission & Values */}
-      <section className="py-20">
+      <section className="py-20 section-dark-3">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="p-8 rounded-2xl bg-card border border-border">
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+            <div className="p-8 rounded-2xl bg-card/80 backdrop-blur-sm border border-border">
+              <div className="w-14 h-14 rounded-xl bg-primary/15 flex items-center justify-center mb-6">
                 <Target className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Миссия</h3>
@@ -77,8 +77,8 @@ const About = () => {
                 способствуя развитию российской экономики.
               </p>
             </div>
-            <div className="p-8 rounded-2xl bg-card border border-border">
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+            <div className="p-8 rounded-2xl bg-card/80 backdrop-blur-sm border border-border">
+              <div className="w-14 h-14 rounded-xl bg-primary/15 flex items-center justify-center mb-6">
                 <Eye className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Видение</h3>
@@ -87,8 +87,8 @@ const About = () => {
                 качества и сервиса в отрасли.
               </p>
             </div>
-            <div className="p-8 rounded-2xl bg-card border border-border">
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+            <div className="p-8 rounded-2xl bg-card/80 backdrop-blur-sm border border-border">
+              <div className="w-14 h-14 rounded-xl bg-primary/15 flex items-center justify-center mb-6">
                 <Shield className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Ценности</h3>
@@ -102,7 +102,7 @@ const About = () => {
       </section>
 
       {/* History Timeline */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-center mb-16">
             История <span className="text-primary">развития</span>
@@ -121,7 +121,7 @@ const About = () => {
                     <div className="text-2xl font-bold text-primary">{milestone.year}</div>
                     <p className="text-muted-foreground">{milestone.event}</p>
                   </div>
-                  <div className="absolute left-4 md:left-1/2 w-3 h-3 rounded-full bg-primary -translate-x-1/2" />
+                  <div className="absolute left-4 md:left-1/2 w-3 h-3 rounded-full bg-primary glow-orange -translate-x-1/2" />
                   <div className="flex-1 hidden md:block" />
                 </div>
               ))}
@@ -131,7 +131,7 @@ const About = () => {
       </section>
 
       {/* Team */}
-      <section className="py-20">
+      <section className="py-20 section-dark-3">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
@@ -143,8 +143,8 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member) => (
-              <div key={member.name} className="p-6 rounded-2xl bg-card border border-border text-center card-hover">
-                <div className="w-24 h-24 rounded-full bg-secondary mx-auto mb-4 flex items-center justify-center">
+              <div key={member.name} className="p-6 rounded-2xl bg-card/80 backdrop-blur-sm border border-border text-center card-hover">
+                <div className="w-24 h-24 rounded-full bg-secondary/50 border border-border mx-auto mb-4 flex items-center justify-center">
                   <Users className="w-12 h-12 text-muted-foreground" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-1">{member.name}</h3>
@@ -157,7 +157,7 @@ const About = () => {
       </section>
 
       {/* Certificates */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
@@ -166,7 +166,7 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {certificates.map((cert) => (
-              <div key={cert} className="flex items-center gap-4 p-6 rounded-xl bg-card border border-border">
+              <div key={cert} className="flex items-center gap-4 p-6 rounded-xl bg-card/80 backdrop-blur-sm border border-border">
                 <Award className="w-8 h-8 text-primary flex-shrink-0" />
                 <span className="text-foreground">{cert}</span>
               </div>
@@ -176,7 +176,7 @@ const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20">
+      <section className="py-20 section-dark-3">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -185,7 +185,7 @@ const About = () => {
             <p className="text-muted-foreground mb-8">
               Свяжитесь с нами для обсуждения условий поставок
             </p>
-            <Button size="lg" className="gradient-gold text-navy-dark font-semibold">
+            <Button size="lg" className="gradient-orange text-white font-semibold glow-orange">
               Связаться с нами
             </Button>
           </div>
