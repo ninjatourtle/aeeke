@@ -1,26 +1,22 @@
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroBg from "@/assets/hero-bg.jpg";
 
 export function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-hero-pattern">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy-dark via-background to-navy opacity-90" />
-        {/* Decorative elements */}
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-gold/5 rounded-full blur-3xl" />
-      </div>
-
-      {/* Grid pattern overlay */}
-      <div className="absolute inset-0 opacity-5">
-        <div
-          className="w-full h-full"
-          style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-            backgroundSize: "50px 50px",
-          }}
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src={heroBg}
+          alt="Oil refinery background"
+          className="w-full h-full object-cover"
         />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/95 via-navy-dark/80 to-transparent" />
+        {/* Decorative elements */}
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-gold/10 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -36,7 +32,7 @@ export function HeroSection() {
           {/* Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight animate-fade-in animation-delay-100">
             Надёжные поставки{" "}
-            <span className="text-gradient-gold">нефтепродуктов</span> для
+            <span className="text-primary">нефтепродуктов</span> для
             вашего бизнеса
           </h1>
 
@@ -66,24 +62,6 @@ export function HeroSection() {
             </Button>
           </div>
 
-          {/* Trust indicators */}
-          <div className="mt-16 pt-8 border-t border-border/50 animate-fade-in animation-delay-400">
-            <p className="text-sm text-muted-foreground mb-4">
-              Нам доверяют крупнейшие компании России
-            </p>
-            <div className="flex flex-wrap items-center gap-8 opacity-60">
-              {["ГАЗПРОМ", "ЛУКОЙЛ", "РОСНЕФТЬ", "РЖД", "АЭРОФЛОТ"].map(
-                (company) => (
-                  <div
-                    key={company}
-                    className="text-sm font-bold tracking-wider text-muted-foreground"
-                  >
-                    {company}
-                  </div>
-                )
-              )}
-            </div>
-          </div>
         </div>
       </div>
 
