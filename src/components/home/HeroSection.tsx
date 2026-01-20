@@ -25,7 +25,7 @@ export function HeroSection() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-fade-in">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-sm font-medium text-primary">
-              Лидер рынка нефтепродуктов с 2005 года
+              Лидер рынка нефтепродуктов с 2018 года
             </span>
           </div>
 

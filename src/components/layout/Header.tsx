@@ -24,7 +24,6 @@ const navigation = [
   { name: "О компании", href: "/about" },
   { name: "Инвесторам", href: "/investors" },
   { name: "Тендеры", href: "/tenders" },
-  { name: "Сотрудничество", href: "/partnership" },
   { name: "Контакты", href: "/contacts" },
 ];
 
