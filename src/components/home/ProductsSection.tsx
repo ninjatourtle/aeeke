@@ -45,7 +45,7 @@ export function ProductsSection() {
             </p>
           </div>
           <Link to="/products">
-            <Button variant="outline" className="group border-border hover:border-primary">
+            <Button className="group gradient-orange text-white glow-orange">
               Весь каталог
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
