@@ -1,5 +1,7 @@
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { RequestModal } from "@/components/RequestModal";
 import heroBg from "@/assets/hero-bg.jpg";
 
 export function HeroSection() {
@@ -45,21 +47,29 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in animation-delay-300">
-            <Button
-              size="lg"
-              className="gradient-gold text-navy-dark font-semibold text-lg px-8 py-6 hover:opacity-90 transition-opacity group"
-            >
-              Получить коммерческое предложение
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-border text-foreground hover:bg-secondary/50 text-lg px-8 py-6 group"
-            >
-              <Play className="w-5 h-5 mr-2 text-primary" />
-              О компании
-            </Button>
+            <RequestModal
+              title="Получить коммерческое предложение"
+              description="Оставьте заявку, и мы подготовим для вас индивидуальное коммерческое предложение"
+              trigger={
+                <Button
+                  size="lg"
+                  className="gradient-gold text-navy-dark font-semibold text-lg px-8 py-6 hover:opacity-90 transition-opacity group"
+                >
+                  Получить коммерческое предложение
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              }
+            />
+            <Link to="/about">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-border text-foreground hover:bg-secondary/50 text-lg px-8 py-6 group"
+              >
+                <Play className="w-5 h-5 mr-2 text-primary" />
+                О компании
+              </Button>
+            </Link>
           </div>
 
         </div>

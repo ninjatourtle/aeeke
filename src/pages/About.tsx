@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { Shield, Target, Eye, Users, Award, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RequestModal } from "@/components/RequestModal";
 
 const team = [
   {
@@ -185,9 +186,15 @@ const About = () => {
             <p className="text-muted-foreground mb-8">
               Свяжитесь с нами для обсуждения условий поставок
             </p>
-            <Button size="lg" className="gradient-orange text-white font-semibold glow-orange">
-              Связаться с нами
-            </Button>
+            <RequestModal
+              title="Связаться с нами"
+              description="Оставьте заявку для обсуждения условий сотрудничества"
+              trigger={
+                <Button size="lg" className="gradient-orange text-white font-semibold glow-orange">
+                  Связаться с нами
+                </Button>
+              }
+            />
           </div>
         </div>
       </section>

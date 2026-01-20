@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { FileCheck, Users, ShieldCheck, Clock, FileText, CheckCircle, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RequestModal } from "@/components/RequestModal";
 
 const tenderAdvantages = [
   {
@@ -237,9 +238,15 @@ const Tenders = () => {
               </div>
             </div>
 
-            <Button size="lg" className="gradient-orange text-white font-semibold glow-orange">
-              Подать заявку на участие
-            </Button>
+            <RequestModal
+              title="Подать заявку на участие в тендере"
+              description="Оставьте заявку, и мы направим вам тендерную документацию"
+              trigger={
+                <Button size="lg" className="gradient-orange text-white font-semibold glow-orange">
+                  Подать заявку на участие
+                </Button>
+              }
+            />
           </div>
         </div>
       </section>
