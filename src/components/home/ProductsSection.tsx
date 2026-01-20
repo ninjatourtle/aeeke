@@ -37,13 +37,13 @@ const products = [
 
 export function ProductsSection() {
   return (
-    <section className="py-24 bg-secondary/20">
+    <section className="py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
           <div className="max-w-2xl">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-              Наша <span className="text-gradient-gold">продукция</span>
+              Наша <span className="text-primary">продукция</span>
             </h2>
             <p className="text-lg text-muted-foreground">
               Полный ассортимент нефтепродуктов от ведущих российских

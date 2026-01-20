@@ -29,7 +29,7 @@ export function ContactSection() {
           <div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Получите{" "}
-              <span className="text-gradient-gold">коммерческое предложение</span>
+              <span className="text-primary">коммерческое предложение</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-10">
               Оставьте заявку, и наш менеджер свяжется с вами в течение 30 минут

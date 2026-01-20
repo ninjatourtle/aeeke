@@ -11,12 +11,12 @@ const partners = [
 
 export function PartnersSection() {
   return (
-    <section className="py-24 bg-secondary/20 border-y border-border">
+    <section className="py-24 bg-card border-y border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Наши <span className="text-gradient-gold">партнёры</span>
+            Наши <span className="text-primary">партнёры</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Работаем напрямую с крупнейшими нефтеперерабатывающими заводами России

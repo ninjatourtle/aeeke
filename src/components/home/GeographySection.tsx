@@ -22,7 +22,7 @@ export function GeographySection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            География <span className="text-gradient-gold">поставок</span>
+            География <span className="text-primary">поставок</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Осуществляем поставки нефтепродуктов по всей территории России —
