@@ -11,7 +11,7 @@ const partners = [
 
 export function PartnersSection() {
   return (
-    <section className="py-24 bg-card border-y border-border">
+    <section className="py-24 section-dark-2">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -28,11 +28,11 @@ export function PartnersSection() {
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className="group flex items-center justify-center p-8 bg-card rounded-2xl border border-border hover:border-primary/30 transition-all duration-300"
+              className="group flex items-center justify-center p-8 bg-card/80 backdrop-blur-sm rounded-2xl border border-border hover:border-primary/40 transition-all duration-300"
             >
               <div className="text-center">
                 {/* Placeholder logo */}
-                <div className="w-16 h-16 rounded-xl bg-secondary flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/10 transition-colors">
+                <div className="w-16 h-16 rounded-xl bg-secondary/50 border border-border flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/15 group-hover:border-primary/30 transition-all">
                   <span className="text-xl font-bold text-muted-foreground group-hover:text-primary transition-colors">
                     {partner.logo}
                   </span>
@@ -47,8 +47,8 @@ export function PartnersSection() {
 
         {/* Trust badge */}
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-3 px-6 py-3 bg-card rounded-full border border-border">
-            <div className="w-2 h-2 rounded-full bg-green-500" />
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-card/80 backdrop-blur-sm rounded-full border border-border">
+            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
             <span className="text-sm text-muted-foreground">
               Официальный дистрибьютор ведущих НПЗ России
             </span>

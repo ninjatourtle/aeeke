@@ -94,7 +94,7 @@ export function StatsSection() {
   }, []);
 
   return (
-    <section className="py-20 bg-card border-y border-border" ref={ref}>
+    <section className="py-20 section-dark-2" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {stats.map((stat, index) => {
@@ -105,8 +105,8 @@ export function StatsSection() {
                 className={`text-center ${inView ? "animate-count-up" : "opacity-0"}`}
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl gradient-gold mb-4">
-                  <Icon className="w-7 h-7 text-navy-dark" />
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl gradient-orange mb-4 glow-orange">
+                  <Icon className="w-7 h-7 text-white" />
                 </div>
                 <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-2">
                   <AnimatedCounter

@@ -17,7 +17,7 @@ const regions = [
 
 export function GeographySection() {
   return (
-    <section className="py-24">
+    <section className="py-24 section-dark-3">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -31,7 +31,7 @@ export function GeographySection() {
         </div>
 
         {/* Map Container */}
-        <div className="relative bg-card rounded-3xl border border-border p-8 overflow-hidden">
+        <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl border border-border p-8 overflow-hidden">
           {/* Decorative background */}
           <div className="absolute inset-0 opacity-5">
             <div
@@ -72,18 +72,18 @@ export function GeographySection() {
                 }}
               >
                 {/* Pulse effect */}
-                <div className="absolute inset-0 w-4 h-4 rounded-full bg-primary/30 animate-ping" />
+                <div className="absolute inset-0 w-4 h-4 rounded-full bg-primary/40 animate-ping" />
 
                 {/* Marker */}
                 <div
-                  className="relative w-4 h-4 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/30 group-hover:scale-125 transition-transform"
+                  className="relative w-4 h-4 rounded-full bg-primary flex items-center justify-center shadow-lg glow-orange group-hover:scale-125 transition-transform"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <MapPin className="w-2.5 h-2.5 text-primary-foreground" />
+                  <MapPin className="w-2.5 h-2.5 text-white" />
                 </div>
 
                 {/* Tooltip */}
-                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-popover border border-border rounded-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg">
+                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-card border border-border rounded-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg">
                   {region.name}
                 </div>
               </div>
@@ -93,7 +93,7 @@ export function GeographySection() {
           {/* Legend */}
           <div className="flex flex-wrap justify-center gap-6 mt-8 pt-8 border-t border-border">
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-primary" />
+              <div className="w-3 h-3 rounded-full bg-primary glow-orange" />
               <span className="text-sm text-muted-foreground">
                 Основные точки присутствия
               </span>
@@ -115,7 +115,7 @@ export function GeographySection() {
             { value: "24ч", label: "срок доставки" },
             { value: "99%", label: "доставок в срок" },
           ].map((stat) => (
-            <div key={stat.label} className="text-center p-6 bg-card rounded-xl border border-border">
+            <div key={stat.label} className="text-center p-6 bg-card/80 backdrop-blur-sm rounded-xl border border-border">
               <div className="text-2xl font-bold text-primary mb-1">
                 {stat.value}
               </div>

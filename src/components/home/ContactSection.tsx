@@ -22,7 +22,7 @@ export function ContactSection() {
   };
 
   return (
-    <section className="py-24">
+    <section className="py-24 section-dark-3">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Info */}
@@ -39,7 +39,7 @@ export function ContactSection() {
             {/* Contact info */}
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-primary/15 border border-primary/20 flex items-center justify-center">
                   <Phone className="w-5 h-5 text-primary" />
                 </div>
                 <div>
@@ -56,7 +56,7 @@ export function ContactSection() {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-primary/15 border border-primary/20 flex items-center justify-center">
                   <Mail className="w-5 h-5 text-primary" />
                 </div>
                 <div>
@@ -90,10 +90,10 @@ export function ContactSection() {
           </div>
 
           {/* Right side - Form */}
-          <div className="bg-card rounded-3xl border border-border p-8 lg:p-10">
+          <div className="bg-card/80 backdrop-blur-sm rounded-3xl border border-border p-8 lg:p-10">
             {submitted ? (
               <div className="text-center py-12">
-                <div className="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 rounded-full bg-green-500/15 border border-green-500/30 flex items-center justify-center mx-auto mb-6">
                   <CheckCircle className="w-8 h-8 text-green-500" />
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-2">
@@ -113,7 +113,7 @@ export function ContactSection() {
                     <Input
                       placeholder="Иван Иванов"
                       required
-                      className="bg-secondary/30 border-border"
+                      className="bg-secondary/30 border-border focus:border-primary"
                     />
                   </div>
                   <div>
@@ -124,7 +124,7 @@ export function ContactSection() {
                       type="tel"
                       placeholder="+7 (999) 123-45-67"
                       required
-                      className="bg-secondary/30 border-border"
+                      className="bg-secondary/30 border-border focus:border-primary"
                     />
                   </div>
                 </div>
@@ -136,7 +136,7 @@ export function ContactSection() {
                   <Input
                     type="email"
                     placeholder="example@company.ru"
-                    className="bg-secondary/30 border-border"
+                    className="bg-secondary/30 border-border focus:border-primary"
                   />
                 </div>
 
@@ -146,7 +146,7 @@ export function ContactSection() {
                   </label>
                   <Input
                     placeholder='ООО "Название компании"'
-                    className="bg-secondary/30 border-border"
+                    className="bg-secondary/30 border-border focus:border-primary"
                   />
                 </div>
 
@@ -176,14 +176,14 @@ export function ContactSection() {
                   <Textarea
                     placeholder="Укажите объёмы, регион доставки и другие пожелания..."
                     rows={4}
-                    className="bg-secondary/30 border-border resize-none"
+                    className="bg-secondary/30 border-border focus:border-primary resize-none"
                   />
                 </div>
 
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full gradient-gold text-navy-dark font-semibold"
+                  className="w-full gradient-orange text-white font-semibold glow-orange"
                 >
                   <Send className="w-4 h-4 mr-2" />
                   Отправить заявку
