@@ -48,7 +48,7 @@ const advantages = [
 
 export function AdvantagesSection() {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 section-dark-3">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -69,10 +69,10 @@ export function AdvantagesSection() {
             return (
               <div
                 key={advantage.title}
-                className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 card-hover"
+                className="group p-8 rounded-2xl bg-card/80 backdrop-blur-sm border border-border hover:border-primary/40 transition-all duration-300 card-hover"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 rounded-xl bg-primary/15 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary/25 transition-all">
                   <Icon className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">

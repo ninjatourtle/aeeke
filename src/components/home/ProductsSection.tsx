@@ -10,8 +10,6 @@ const products = [
       "Летнее, зимнее и арктическое дизельное топливо класса К5 по ГОСТ 32511-2013",
     items: ["ДТ-Л-К5", "ДТ-З-К5", "ДТ-А-К5", "ДТ Евро-5"],
     href: "/products/diesel",
-    color: "from-blue-500/20 to-cyan-500/20",
-    iconColor: "text-blue-400",
   },
   {
     icon: Flame,
@@ -20,8 +18,6 @@ const products = [
       "Автомобильные бензины всех марок с улучшенными экологическими характеристиками",
     items: ["АИ-92-К5", "АИ-95-К5", "АИ-98-К5", "АИ-95 Premium"],
     href: "/products/gasoline",
-    color: "from-orange-500/20 to-red-500/20",
-    iconColor: "text-orange-400",
   },
   {
     icon: Plane,
@@ -30,14 +26,12 @@ const products = [
       "Топливо для реактивных двигателей, соответствующее международным стандартам",
     items: ["ТС-1", "РТ", "Jet A-1"],
     href: "/products/kerosene",
-    color: "from-purple-500/20 to-pink-500/20",
-    iconColor: "text-purple-400",
   },
 ];
 
 export function ProductsSection() {
   return (
-    <section className="py-24">
+    <section className="py-24 section-dark-2">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
@@ -51,7 +45,7 @@ export function ProductsSection() {
             </p>
           </div>
           <Link to="/products">
-            <Button variant="outline" className="group">
+            <Button variant="outline" className="group border-border hover:border-primary">
               Весь каталог
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -66,19 +60,15 @@ export function ProductsSection() {
               <Link
                 key={product.title}
                 to={product.href}
-                className="group relative overflow-hidden rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 card-hover"
+                className="group relative overflow-hidden rounded-2xl bg-card/80 backdrop-blur-sm border border-border hover:border-primary/40 transition-all duration-300 card-hover"
               >
-                {/* Background gradient */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
-                />
+                {/* Background gradient on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 <div className="relative p-8">
                   {/* Icon */}
-                  <div
-                    className={`w-16 h-16 rounded-2xl bg-background/50 border border-border flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}
-                  >
-                    <Icon className={`w-8 h-8 ${product.iconColor}`} />
+                  <div className="w-16 h-16 rounded-2xl bg-primary/15 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary/25 transition-all">
+                    <Icon className="w-8 h-8 text-primary" />
                   </div>
 
                   {/* Content */}
@@ -94,7 +84,7 @@ export function ProductsSection() {
                     {product.items.map((item) => (
                       <span
                         key={item}
-                        className="px-3 py-1 text-sm bg-secondary/50 rounded-full text-muted-foreground"
+                        className="px-3 py-1 text-sm bg-secondary/50 border border-border rounded-full text-muted-foreground"
                       >
                         {item}
                       </span>
