@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Energy Construction - Gradient Dark Theme with Orange Accents
+/* Energy Construction - Gradient Dark Theme with Dark Blue Accents
    Smooth transitions between sections: black → dark navy → black
    All colors MUST be HSL.
 */
@@ -19,7 +19,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 30% 10%;
 
-    --primary: 30 100% 50%;
+    --primary: 210 100% 35%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 220 15% 90%;
@@ -28,7 +28,7 @@
     --muted: 220 15% 92%;
     --muted-foreground: 220 10% 40%;
 
-    --accent: 30 100% 50%;
+    --accent: 210 100% 35%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -36,26 +36,26 @@
 
     --border: 220 15% 85%;
     --input: 220 15% 85%;
-    --ring: 30 100% 50%;
+    --ring: 210 100% 35%;
 
     --radius: 0.5rem;
 
     /* Custom tokens */
-    --orange: 30 100% 50%;
-    --orange-light: 35 100% 60%;
-    --orange-dark: 25 100% 40%;
+    --blue: 210 100% 35%;
+    --blue-light: 210 90% 50%;
+    --blue-dark: 210 100% 25%;
     --dark-1: 0 0% 4%;
     --dark-2: 220 20% 8%;
     --dark-3: 220 25% 12%;
 
     --sidebar-background: 0 0% 4%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 30 100% 50%;
+    --sidebar-primary: 210 100% 35%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 220 20% 12%;
     --sidebar-accent-foreground: 0 0% 95%;
     --sidebar-border: 220 15% 15%;
-    --sidebar-ring: 30 100% 50%;
+    --sidebar-ring: 210 100% 35%;
   }
 
   .dark {
@@ -70,8 +70,8 @@
     --popover: 220 20% 8%;
     --popover-foreground: 0 0% 98%;
 
-    /* Bright orange primary */
-    --primary: 30 100% 50%;
+    /* Deep blue primary */
+    --primary: 210 100% 35%;
     --primary-foreground: 0 0% 100%;
 
     /* Dark navy secondary */
@@ -82,8 +82,8 @@
     --muted: 220 15% 15%;
     --muted-foreground: 0 0% 65%;
 
-    /* Orange accent */
-    --accent: 30 100% 50%;
+    /* Blue accent */
+    --accent: 210 100% 35%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 40%;
@@ -91,27 +91,27 @@
 
     --border: 220 15% 18%;
     --input: 220 15% 18%;
-    --ring: 30 100% 50%;
+    --ring: 210 100% 35%;
 
     /* Custom tokens for gradient transitions */
-    --orange: 30 100% 50%;
-    --orange-light: 35 100% 60%;
-    --orange-dark: 25 100% 40%;
+    --blue: 210 100% 35%;
+    --blue-light: 210 90% 50%;
+    --blue-dark: 210 100% 25%;
     --dark-1: 0 0% 4%;
     --dark-2: 220 20% 8%;
     --dark-3: 220 25% 12%;
-    --gold: 38 95% 55%;
-    --gold-light: 42 100% 65%;
+    --gold: 210 100% 45%;
+    --gold-light: 210 90% 55%;
     --navy-dark: 0 0% 4%;
 
     --sidebar-background: 0 0% 3%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 30 100% 50%;
+    --sidebar-primary: 210 100% 35%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 220 20% 10%;
     --sidebar-accent-foreground: 0 0% 95%;
     --sidebar-border: 220 15% 12%;
-    --sidebar-ring: 30 100% 50%;
+    --sidebar-ring: 210 100% 35%;
   }
 }
 
@@ -144,13 +144,13 @@
     background: linear-gradient(180deg, hsl(var(--dark-1)) 0%, hsl(var(--dark-3)) 50%, hsl(var(--dark-1)) 100%);
   }
 
-  /* Orange gradient for CTAs and accents */
+  /* Blue gradient for CTAs and accents */
   .gradient-gold {
-    background: linear-gradient(135deg, hsl(35 100% 60%) 0%, hsl(30 100% 50%) 50%, hsl(25 100% 40%) 100%);
+    background: linear-gradient(135deg, hsl(210 90% 50%) 0%, hsl(210 100% 35%) 50%, hsl(210 100% 25%) 100%);
   }
 
   .gradient-orange {
-    background: linear-gradient(135deg, hsl(35 100% 60%) 0%, hsl(30 100% 50%) 100%);
+    background: linear-gradient(135deg, hsl(210 90% 50%) 0%, hsl(210 100% 35%) 100%);
   }
 
   /* Card hover effect */
@@ -160,13 +160,13 @@
   }
 
   .card-hover:hover {
-    box-shadow: 0 20px 40px -15px hsl(30 100% 50% / 0.15);
+    box-shadow: 0 20px 40px -15px hsl(210 100% 35% / 0.2);
   }
 
-  /* Orange text gradient */
+  /* Blue text gradient */
   .text-gradient-orange {
     @apply bg-clip-text text-transparent;
-    background: linear-gradient(135deg, hsl(35 100% 60%) 0%, hsl(30 100% 50%) 100%);
+    background: linear-gradient(135deg, hsl(210 90% 55%) 0%, hsl(210 100% 40%) 100%);
   }
 
   /* Section container */
@@ -189,7 +189,7 @@
 
   /* Glow effect for primary elements */
   .glow-orange {
-    box-shadow: 0 0 30px hsl(30 100% 50% / 0.3);
+    box-shadow: 0 0 30px hsl(210 100% 35% / 0.4);
   }
 }
 
@@ -238,7 +238,7 @@
   }
 
   .animate-shimmer {
-    background: linear-gradient(90deg, transparent, hsl(30 100% 50% / 0.1), transparent);
+    background: linear-gradient(90deg, transparent, hsl(210 100% 35% / 0.1), transparent);
     background-size: 200% 100%;
     animation: shimmer 2s infinite;
   }
