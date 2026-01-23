@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Fuel, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const footerLinks = {
   products: [
@@ -27,18 +28,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-lg gradient-gold flex items-center justify-center">
-                <Fuel className="w-7 h-7 text-navy-dark" />
-              </div>
-              <div>
-                <div className="text-lg font-bold text-foreground tracking-tight">
-                  ЭНЕРДЖИ
-                </div>
-                <div className="text-xs text-primary font-semibold tracking-widest">
-                  КОНСТРАКШН
-                </div>
-              </div>
+            <Link to="/" className="flex items-center mb-6">
+              <img 
+                src={logo} 
+                alt="АО Энерджи Констракшн" 
+                className="h-12 w-auto"
+              />
             </Link>
             <p className="text-muted-foreground mb-6 max-w-sm">
               Надёжный поставщик качественных нефтепродуктов для вашего бизнеса.
