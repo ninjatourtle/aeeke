@@ -1,30 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
-import { Shield, Target, Eye, Users, Award, Building2 } from "lucide-react";
+import { Shield, Target, Eye, Award, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RequestModal } from "@/components/RequestModal";
-
-const team = [
-  {
-    name: "Шиков Игорь",
-    position: "Генеральный директор",
-    description: "Руководитель компании с многолетним опытом в нефтегазовой отрасли",
-  },
-  {
-    name: "Елена Козлова",
-    position: "Финансовый директор",
-    description: "Эксперт в области корпоративных финансов",
-  },
-  {
-    name: "Михаил Сидоров",
-    position: "Коммерческий директор",
-    description: "Специалист по развитию B2B продаж",
-  },
-  {
-    name: "Ольга Новикова",
-    position: "Директор по логистике",
-    description: "Оптимизация поставок по всей России",
-  },
-];
 
 const certificates = [
   "ISO 9001:2015 — Система менеджмента качества",
@@ -131,31 +108,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-20 section-dark-3">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Руководство <span className="text-primary">компании</span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Команда профессионалов с многолетним опытом в нефтегазовой отрасли
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member) => (
-              <div key={member.name} className="p-6 rounded-2xl bg-card/80 backdrop-blur-sm border border-border text-center card-hover">
-                <div className="w-24 h-24 rounded-full bg-secondary/50 border border-border mx-auto mb-4 flex items-center justify-center">
-                  <Users className="w-12 h-12 text-muted-foreground" />
-                </div>
-                <h3 className="text-lg font-semibold text-foreground mb-1">{member.name}</h3>
-                <p className="text-sm text-primary mb-2">{member.position}</p>
-                <p className="text-sm text-muted-foreground">{member.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Certificates */}
       <section className="py-20 section-dark-2">

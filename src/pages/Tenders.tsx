@@ -94,8 +94,7 @@ const Tenders = () => {
               Тендерные <span className="text-primary">закупки</span> компании
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl">
-              Наша компания проводит открытые тендеры и конкурсные процедуры для закупки товаров и услуг. 
-              Мы гарантируем прозрачность, честную конкуренцию и равные условия для всех участников.
+              Наша компания проводит открытые тендеры и конкурсные процедуры для закупки товаров и услуг.
             </p>
           </div>
         </div>
@@ -232,8 +231,8 @@ const Tenders = () => {
                   <Mail className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-sm text-muted-foreground mb-2">Email</p>
-                <a href="mailto:tender@aoec.ru" className="text-lg font-semibold text-foreground hover:text-primary transition-colors">
-                  tender@aoec.ru
+                <a href="mailto:info@aoec.ru" className="text-lg font-semibold text-foreground hover:text-primary transition-colors">
+                  info@aoec.ru
                 </a>
               </div>
             </div>
