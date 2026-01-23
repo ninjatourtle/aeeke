@@ -2,6 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Shield, Target, Eye, Award, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RequestModal } from "@/components/RequestModal";
+import { SEO } from "@/components/SEO";
 
 const certificates = [
   "ISO 9001:2015 — Система менеджмента качества",
@@ -22,6 +23,11 @@ const milestones = [
 const About = () => {
   return (
     <Layout>
+      <SEO
+        title="О компании — АО Энерджи Констракшн | Надёжный поставщик топлива"
+        description="С 2018 года поставляем качественные нефтепродукты по всей России. 500 000+ тонн топлива в год, 30 регионов присутствия. Узнайте о нас больше."
+        keywords="Энерджи Констракшн, о компании, поставщик топлива, история компании, нефтепродукты"
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

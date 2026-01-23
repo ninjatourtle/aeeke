@@ -2,6 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Fuel, Flame, Plane, CheckCircle, Thermometer, Droplets, Gauge, Shield, Award, Truck, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RequestModal } from "@/components/RequestModal";
+import { SEO } from "@/components/SEO";
 
 const dieselProducts = [
   {
@@ -114,6 +115,11 @@ const advantages = [
 const Products = () => {
   return (
     <Layout>
+      <SEO
+        title="Каталог нефтепродуктов — Дизель, бензин, авиакеросин оптом"
+        description="Полный каталог топлива: дизельное топливо Евро-5, бензин АИ-92/95/98, авиакеросин ТС-1, РТ, Jet A-1. Прямые поставки с НПЗ."
+        keywords="дизельное топливо, бензин АИ-92, бензин АИ-95, бензин АИ-98, авиакеросин ТС-1, Jet A-1, каталог топлива"
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

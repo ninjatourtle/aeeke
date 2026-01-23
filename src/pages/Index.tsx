@@ -5,10 +5,16 @@ import { AdvantagesSection } from "@/components/home/AdvantagesSection";
 import { ProductsSection } from "@/components/home/ProductsSection";
 import { GeographySection } from "@/components/home/GeographySection";
 import { ContactSection } from "@/components/home/ContactSection";
+import { SEO } from "@/components/SEO";
 
 const Index = () => {
   return (
     <Layout>
+      <SEO
+        title="АО Энерджи Констракшн — Оптовые поставки нефтепродуктов в России"
+        description="Оптовые поставки дизельного топлива, бензина и авиакеросина. Прямые контракты с НПЗ, доставка по всей России. ☎ +7 (812) 720-97-67"
+        keywords="дизельное топливо оптом, бензин оптом, авиакеросин, нефтепродукты, поставки топлива"
+      />
       <HeroSection />
       <StatsSection />
       <AdvantagesSection />

@@ -1,9 +1,15 @@
 import { Layout } from "@/components/layout/Layout";
 import { FileText } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const Terms = () => {
   return (
     <Layout>
+      <SEO
+        title="Условия использования — АО Энерджи Констракшн"
+        description="Условия использования веб-сайта АО Энерджи Констракшн. Правила, ограничения и юридическая информация."
+        keywords="условия использования, правила сайта, пользовательское соглашение"
+      />
       <section className="pt-32 pb-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
