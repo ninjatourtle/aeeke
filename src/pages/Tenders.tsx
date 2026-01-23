@@ -1,5 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
-import { FileCheck, Users, ShieldCheck, Clock, FileText, CheckCircle, Phone, Mail } from "lucide-react";
+import { FileCheck, Users, ShieldCheck, Clock, FileText, CheckCircle, Phone, Mail, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RequestModal } from "@/components/RequestModal";
 import { SEO } from "@/components/SEO";
@@ -222,6 +222,22 @@ const Tenders = () => {
               свяжитесь с нашим отделом закупок
             </p>
             
+            {/* Начальник отдела */}
+            <div className="p-6 rounded-2xl bg-card/80 backdrop-blur-sm border border-primary/30 mb-8">
+              <div className="flex flex-col sm:flex-row items-center gap-4">
+                <div className="w-16 h-16 rounded-full gradient-orange flex items-center justify-center glow-orange flex-shrink-0">
+                  <User className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-center sm:text-left">
+                  <p className="text-sm text-primary font-medium mb-1">Начальник отдела закупок</p>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Акимов Артем Александрович</h3>
+                  <a href="mailto:a.akimov@aoec-tender.ru" className="text-muted-foreground hover:text-primary transition-colors">
+                    a.akimov@aoec-tender.ru
+                  </a>
+                </div>
+              </div>
+            </div>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
               <div className="p-6 rounded-2xl bg-card/80 backdrop-blur-sm border border-border">
                 <div className="w-12 h-12 rounded-xl gradient-orange flex items-center justify-center mx-auto mb-4 glow-orange">
