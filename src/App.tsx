@@ -13,6 +13,8 @@ import ProductKerosene from "./pages/products/ProductKerosene";
 import Investors from "./pages/Investors";
 import Tenders from "./pages/Tenders";
 import Contacts from "./pages/Contacts";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +36,8 @@ const App = () => (
           <Route path="/investors" element={<Investors />} />
           <Route path="/tenders" element={<Tenders />} />
           <Route path="/contacts" element={<Contacts />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
