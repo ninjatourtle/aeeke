@@ -29,9 +29,9 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center mb-6">
-              <img 
+            <img 
                 src={logo} 
-                alt="АО Энерджи Констракшн" 
+                alt="АО «ЭК»" 
                 className="h-14 w-auto"
               />
             </Link>
@@ -120,7 +120,7 @@ export function Footer() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2026 Энерджи Констракшн. Все права защищены.
+              © 2026 АО «ЭК». Все права защищены.
             </p>
             <div className="flex gap-6">
               <Link
