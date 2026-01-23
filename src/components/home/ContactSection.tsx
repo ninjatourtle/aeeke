@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Send, Phone, Mail, CheckCircle } from "lucide-react";
+import { Send, Phone, Mail, CheckCircle, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -10,15 +10,61 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 export function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    company: "",
+    product: "",
+    message: "",
+  });
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const productLabels: Record<string, string> = {
+    diesel: "Дизельное топливо",
+    gasoline: "Бензин",
+    kerosene: "Авиационный керосин",
+    all: "Несколько продуктов",
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    setIsLoading(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke("send-telegram", {
+        body: {
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email || undefined,
+          company: formData.company || undefined,
+          product: formData.product ? productLabels[formData.product] : undefined,
+          message: formData.message || undefined,
+          formType: "Заявка с главной страницы",
+        },
+      });
+
+      if (error) throw error;
+
+      setSubmitted(true);
+      setFormData({ name: "", phone: "", email: "", company: "", product: "", message: "" });
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch (error: any) {
+      console.error("Error sending form:", error);
+      toast({
+        title: "Ошибка отправки",
+        description: "Попробуйте ещё раз или свяжитесь с нами по телефону",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -113,6 +159,8 @@ export function ContactSection() {
                     <Input
                       placeholder="Иван Иванов"
                       required
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="bg-secondary/30 border-border focus:border-primary"
                     />
                   </div>
@@ -124,6 +172,8 @@ export function ContactSection() {
                       type="tel"
                       placeholder="+7 (999) 123-45-67"
                       required
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="bg-secondary/30 border-border focus:border-primary"
                     />
                   </div>
@@ -136,6 +186,8 @@ export function ContactSection() {
                   <Input
                     type="email"
                     placeholder="example@company.ru"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="bg-secondary/30 border-border focus:border-primary"
                   />
                 </div>
@@ -146,6 +198,8 @@ export function ContactSection() {
                   </label>
                   <Input
                     placeholder='ООО "Название компании"'
+                    value={formData.company}
+                    onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     className="bg-secondary/30 border-border focus:border-primary"
                   />
                 </div>
@@ -154,7 +208,7 @@ export function ContactSection() {
                   <label className="text-sm font-medium text-foreground mb-2 block">
                     Интересующий продукт
                   </label>
-                  <Select>
+                  <Select value={formData.product} onValueChange={(value) => setFormData({ ...formData, product: value })}>
                     <SelectTrigger className="bg-secondary/30 border-border">
                       <SelectValue placeholder="Выберите продукт" />
                     </SelectTrigger>
@@ -176,6 +230,8 @@ export function ContactSection() {
                   <Textarea
                     placeholder="Укажите объёмы, регион доставки и другие пожелания..."
                     rows={4}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="bg-secondary/30 border-border focus:border-primary resize-none"
                   />
                 </div>
@@ -183,10 +239,20 @@ export function ContactSection() {
                 <Button
                   type="submit"
                   size="lg"
+                  disabled={isLoading}
                   className="w-full gradient-orange text-white font-semibold glow-orange"
                 >
-                  <Send className="w-4 h-4 mr-2" />
-                  Отправить заявку
+                  {isLoading ? (
+                    <>
+                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                      Отправка...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4 mr-2" />
+                      Отправить заявку
+                    </>
+                  )}
                 </Button>
 
                 <p className="text-xs text-center text-muted-foreground">
