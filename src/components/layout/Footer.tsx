@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import { Fuel, Phone, Mail, MapPin, Send } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Fuel, Phone, Mail, MapPin } from "lucide-react";
 
 const footerLinks = {
   products: [
@@ -47,22 +45,6 @@ export function Footer() {
               Работаем с 2018 года по всей России.
             </p>
 
-            {/* Newsletter */}
-            <div className="space-y-3">
-              <p className="text-sm font-medium text-foreground">
-                Подпишитесь на новости
-              </p>
-              <div className="flex gap-2">
-                <Input
-                  type="email"
-                  placeholder="Ваш email"
-                  className="bg-secondary/50 border-border"
-                />
-                <Button size="icon" className="gradient-gold shrink-0">
-                  <Send className="w-4 h-4 text-navy-dark" />
-                </Button>
-              </div>
-            </div>
           </div>
 
           {/* Products */}
@@ -130,7 +112,7 @@ export function Footer() {
               <li>
                 <div className="flex items-start gap-3 text-muted-foreground text-sm">
                   <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                  <span>Санкт-Петербург, пер. Зеленков, д. 7а литер з, помещ. 5-н офис 104</span>
+                  <span>Санкт-Петербург, пер. Зеленков, д. 7а литер 3, помещ. 5-н офис 104</span>
                 </div>
               </li>
             </ul>
@@ -143,7 +125,7 @@ export function Footer() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2024 Энерджи Констракшн. Все права защищены.
+              © 2026 Энерджи Констракшн. Все права защищены.
             </p>
             <div className="flex gap-6">
               <Link

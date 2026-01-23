@@ -1,5 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
-import { MapPin, Phone, Mail, Clock, Building2, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,16 +16,6 @@ const offices = [
   },
 ];
 
-const requisites = {
-  name: 'ООО "Энерджи Констракшн"',
-  inn: "7701234567",
-  kpp: "770101001",
-  ogrn: "1027700123456",
-  bank: 'ПАО "Сбербанк России"',
-  account: "40702810000000123456",
-  corr: "30101810400000000225",
-  bik: "044525225",
-};
 
 const Contacts = () => {
   return (
@@ -167,57 +157,6 @@ const Contacts = () => {
         </div>
       </section>
 
-      {/* Requisites */}
-      <section className="py-20 section-dark-2">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-14 h-14 rounded-xl bg-primary/15 flex items-center justify-center">
-                <Building2 className="w-7 h-7 text-primary" />
-              </div>
-              <h2 className="text-3xl font-bold text-foreground">
-                Реквизиты <span className="text-primary">компании</span>
-              </h2>
-            </div>
-            <div className="p-6 rounded-xl bg-card/80 backdrop-blur-sm border border-border">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                <div>
-                  <p className="text-muted-foreground">Наименование</p>
-                  <p className="font-medium text-foreground">{requisites.name}</p>
-                </div>
-                <div>
-                  <p className="text-muted-foreground">ИНН</p>
-                  <p className="font-medium text-foreground">{requisites.inn}</p>
-                </div>
-                <div>
-                  <p className="text-muted-foreground">КПП</p>
-                  <p className="font-medium text-foreground">{requisites.kpp}</p>
-                </div>
-                <div>
-                  <p className="text-muted-foreground">ОГРН</p>
-                  <p className="font-medium text-foreground">{requisites.ogrn}</p>
-                </div>
-                <div>
-                  <p className="text-muted-foreground">Банк</p>
-                  <p className="font-medium text-foreground">{requisites.bank}</p>
-                </div>
-                <div>
-                  <p className="text-muted-foreground">Расчётный счёт</p>
-                  <p className="font-medium text-foreground">{requisites.account}</p>
-                </div>
-                <div>
-                  <p className="text-muted-foreground">Корр. счёт</p>
-                  <p className="font-medium text-foreground">{requisites.corr}</p>
-                </div>
-                <div>
-                  <p className="text-muted-foreground">БИК</p>
-                  <p className="font-medium text-foreground">{requisites.bik}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 };
