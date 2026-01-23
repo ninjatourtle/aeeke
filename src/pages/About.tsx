@@ -24,9 +24,9 @@ const About = () => {
   return (
     <Layout>
       <SEO
-        title="О компании — АО Энерджи Констракшн | Надёжный поставщик топлива"
+        title="О компании — АО «ЭК» | Надёжный поставщик топлива"
         description="С 2018 года поставляем качественные нефтепродукты по всей России. 500 000+ тонн топлива в год, 30 регионов присутствия. Узнайте о нас больше."
-        keywords="Энерджи Констракшн, о компании, поставщик топлива, история компании, нефтепродукты"
+        keywords="АО ЭК, о компании, поставщик топлива, история компании, нефтепродукты"
       />
       {/* Hero Section */}
       <section className="pt-32 pb-20 section-dark-2">
@@ -37,7 +37,7 @@ const About = () => {
               <span className="text-sm font-medium text-primary">О компании</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Энерджи Констракшн — надёжный партнёр в мире <span className="text-primary">нефтепродуктов</span>
+              АО «ЭК» — надёжный партнёр в мире <span className="text-primary">нефтепродуктов</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl">
               С 2018 года мы обеспечиваем российский бизнес качественным топливом, 

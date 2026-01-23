@@ -46,7 +46,7 @@ export function Header() {
           <Link to="/" className="flex items-center group">
             <img 
               src={logo} 
-              alt="АО Энерджи Констракшн" 
+              alt="АО «ЭК»" 
               className="h-14 sm:h-16 w-auto group-hover:opacity-90 transition-opacity"
             />
           </Link>
