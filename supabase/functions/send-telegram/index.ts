@@ -35,7 +35,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Format the message
     const formType = data.formType || "Заявка с сайта";
-    let text = `📩 <b>${formType}</b>\n\n`;
+    let text = `📩 <b>${formType}</b>\n`;
+    text += `🌐 <b>Сайт:</b> aoec.ru\n\n`;
     text += `👤 <b>Имя:</b> ${data.name}\n`;
     text += `📞 <b>Телефон:</b> ${data.phone}\n`;
     
