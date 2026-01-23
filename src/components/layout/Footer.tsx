@@ -32,7 +32,7 @@ export function Footer() {
               <img 
                 src={logo} 
                 alt="АО Энерджи Констракшн" 
-                className="h-12 w-auto"
+                className="h-14 w-auto"
               />
             </Link>
             <p className="text-muted-foreground mb-6 max-w-sm">
