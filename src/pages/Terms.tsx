@@ -112,7 +112,7 @@ const Terms = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   По вопросам, связанным с использованием Сайта, вы можете обратиться 
                   по адресу электронной почты: <a href="mailto:info@aoec.ru" className="text-primary hover:underline">info@aoec.ru</a> 
-                  или по телефону: <a href="tel:+78127209767" className="text-primary hover:underline">+7 (812) 720-97-67</a>.
+                  или по телефону: <a href="tel:+78127209767,220" className="text-primary hover:underline">+7 (812) 720-97-67, доб. 220</a>.
                 </p>
               </section>
             </div>
