@@ -108,10 +108,10 @@ export function ContactSection() {
                 <div>
                   <div className="text-sm text-muted-foreground">Email</div>
                   <a
-                    href="mailto:sales@aoec.ru"
+                    href="mailto:info@aoec.ru"
                     className="text-lg font-semibold text-foreground hover:text-primary transition-colors"
                   >
-                    sales@aoec.ru
+                    info@aoec.ru
                   </a>
                 </div>
               </div>
