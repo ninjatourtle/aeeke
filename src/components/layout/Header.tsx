@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, Fuel, Phone } from "lucide-react";
+import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 import { RequestModal } from "@/components/RequestModal";
+import logo from "@/assets/logo.png";
 
 const navigation = [
   { name: "Главная", href: "/" },
@@ -42,18 +43,12 @@ export function Header() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-lg gradient-orange flex items-center justify-center shadow-lg glow-orange group-hover:scale-105 transition-transform">
-              <Fuel className="w-7 h-7 text-white" />
-            </div>
-            <div className="hidden sm:block">
-              <div className="text-lg font-bold text-foreground tracking-tight">
-                ЭНЕРДЖИ
-              </div>
-              <div className="text-xs text-primary font-semibold tracking-widest">
-                КОНСТРАКШН
-              </div>
-            </div>
+          <Link to="/" className="flex items-center group">
+            <img 
+              src={logo} 
+              alt="АО Энерджи Констракшн" 
+              className="h-12 w-auto group-hover:opacity-90 transition-opacity"
+            />
           </Link>
 
           {/* Desktop Navigation */}
