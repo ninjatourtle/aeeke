@@ -46,7 +46,7 @@ export function ContactSection() {
           company: formData.company || undefined,
           product: formData.product ? productLabels[formData.product] : undefined,
           message: formData.message || undefined,
-          formType: "Заявка с главной страницы",
+          formType: "Форма внизу главной страницы",
         },
       });
 
