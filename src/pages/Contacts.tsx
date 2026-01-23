@@ -1,10 +1,13 @@
+import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { SEO } from "@/components/SEO";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const offices = [
   {
@@ -19,6 +22,50 @@ const offices = [
 
 
 const Contacts = () => {
+  const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    company: "",
+    message: "",
+  });
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke("send-telegram", {
+        body: {
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email || undefined,
+          company: formData.company || undefined,
+          message: formData.message || undefined,
+          formType: "Заявка со страницы контактов",
+        },
+      });
+
+      if (error) throw error;
+
+      setSubmitted(true);
+      setFormData({ name: "", phone: "", email: "", company: "", message: "" });
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch (error: any) {
+      console.error("Error sending form:", error);
+      toast({
+        title: "Ошибка отправки",
+        description: "Попробуйте ещё раз или свяжитесь с нами по телефону",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <Layout>
       <SEO
@@ -126,39 +173,104 @@ const Contacts = () => {
             <p className="text-muted-foreground text-center mb-12">
               Заполните форму, и мы свяжемся с вами в течение рабочего дня
             </p>
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Имя *</Label>
-                  <Input id="name" placeholder="Ваше имя" className="bg-secondary/30 border-border focus:border-primary" />
+            
+            {submitted ? (
+              <div className="text-center py-12 bg-card/80 backdrop-blur-sm rounded-3xl border border-border">
+                <div className="w-16 h-16 rounded-full bg-green-500/15 border border-green-500/30 flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle className="w-8 h-8 text-green-500" />
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="company">Компания</Label>
-                  <Input id="company" placeholder="Название компании" className="bg-secondary/30 border-border focus:border-primary" />
-                </div>
+                <h3 className="text-2xl font-semibold text-foreground mb-2">
+                  Заявка отправлена!
+                </h3>
+                <p className="text-muted-foreground">
+                  Мы свяжемся с вами в ближайшее время
+                </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="phone">Телефон *</Label>
-                  <Input id="phone" type="tel" placeholder="+7 (___) ___-__-__" className="bg-secondary/30 border-border focus:border-primary" />
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="name" className="text-foreground">Имя *</Label>
+                    <Input 
+                      id="name" 
+                      placeholder="Ваше имя" 
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="bg-secondary/30 border-border focus:border-primary text-foreground placeholder:text-muted-foreground" 
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="company" className="text-foreground">Компания</Label>
+                    <Input 
+                      id="company" 
+                      placeholder="Название компании" 
+                      value={formData.company}
+                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                      className="bg-secondary/30 border-border focus:border-primary text-foreground placeholder:text-muted-foreground" 
+                    />
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="phone" className="text-foreground">Телефон *</Label>
+                    <Input 
+                      id="phone" 
+                      type="tel" 
+                      placeholder="+7 (___) ___-__-__" 
+                      required
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      className="bg-secondary/30 border-border focus:border-primary text-foreground placeholder:text-muted-foreground" 
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email" className="text-foreground">Email</Label>
+                    <Input 
+                      id="email" 
+                      type="email" 
+                      placeholder="email@example.com" 
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="bg-secondary/30 border-border focus:border-primary text-foreground placeholder:text-muted-foreground" 
+                    />
+                  </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="email@example.com" className="bg-secondary/30 border-border focus:border-primary" />
+                  <Label htmlFor="message" className="text-foreground">Сообщение *</Label>
+                  <Textarea 
+                    id="message" 
+                    placeholder="Опишите ваш вопрос или запрос..." 
+                    rows={5} 
+                    required
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    className="bg-secondary/30 border-border focus:border-primary text-foreground placeholder:text-muted-foreground resize-none" 
+                  />
                 </div>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="message">Сообщение *</Label>
-                <Textarea id="message" placeholder="Опишите ваш вопрос или запрос..." rows={5} className="bg-secondary/30 border-border focus:border-primary resize-none" />
-              </div>
-              <Button type="submit" size="lg" className="w-full gradient-orange text-white font-semibold glow-orange">
-                <Send className="w-4 h-4 mr-2" />
-                Отправить сообщение
-              </Button>
-              <p className="text-xs text-muted-foreground text-center">
-                Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных
-              </p>
-            </form>
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  disabled={isLoading}
+                  className="w-full gradient-orange text-white font-semibold glow-orange"
+                >
+                  {isLoading ? (
+                    <>
+                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                      Отправка...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4 mr-2" />
+                      Отправить сообщение
+                    </>
+                  )}
+                </Button>
+                <p className="text-xs text-muted-foreground text-center">
+                  Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных
+                </p>
+              </form>
+            )}
           </div>
         </div>
       </section>
