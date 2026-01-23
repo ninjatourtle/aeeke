@@ -47,7 +47,7 @@ export function Header() {
             <img 
               src={logo} 
               alt="АО Энерджи Констракшн" 
-              className="h-12 w-auto group-hover:opacity-90 transition-opacity"
+              className="h-14 sm:h-16 w-auto group-hover:opacity-90 transition-opacity"
             />
           </Link>
 
