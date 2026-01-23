@@ -1,9 +1,15 @@
 import { Layout } from "@/components/layout/Layout";
 import { Shield } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const Privacy = () => {
   return (
     <Layout>
+      <SEO
+        title="Политика конфиденциальности — АО Энерджи Констракшн"
+        description="Политика обработки и защиты персональных данных пользователей сайта АО Энерджи Констракшн."
+        keywords="политика конфиденциальности, персональные данные, защита данных"
+      />
       <section className="pt-32 pb-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">

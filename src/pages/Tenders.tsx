@@ -2,6 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { FileCheck, Users, ShieldCheck, Clock, FileText, CheckCircle, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RequestModal } from "@/components/RequestModal";
+import { SEO } from "@/components/SEO";
 
 const tenderAdvantages = [
   {
@@ -82,6 +83,11 @@ const participationSteps = [
 const Tenders = () => {
   return (
     <Layout>
+      <SEO
+        title="Тендеры и закупки — АО Энерджи Констракшн"
+        description="Участвуйте в тендерах на поставку нефтепродуктов, транспортные услуги, хранение и перевалку. Открытые конкурсные процедуры."
+        keywords="тендеры нефтепродукты, закупки топлива, конкурс поставщиков, тендерные процедуры"
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

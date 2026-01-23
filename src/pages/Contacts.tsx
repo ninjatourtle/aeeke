@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { SEO } from "@/components/SEO";
 
 const offices = [
   {
@@ -20,6 +21,11 @@ const offices = [
 const Contacts = () => {
   return (
     <Layout>
+      <SEO
+        title="Контакты — АО Энерджи Констракшн | Санкт-Петербург"
+        description="Свяжитесь с нами для заказа нефтепродуктов. Адрес: Санкт-Петербург, пер. Зеленков, д. 7а. ☎ +7 (812) 720-97-67, info@aoec.ru"
+        keywords="контакты Энерджи Констракшн, телефон, адрес, заказать топливо"
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

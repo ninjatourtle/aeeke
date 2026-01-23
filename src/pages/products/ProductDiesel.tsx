@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Fuel, CheckCircle, Thermometer, Droplets, Gauge, ArrowLeft, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RequestModal } from "@/components/RequestModal";
+import { SEO } from "@/components/SEO";
 
 const dieselProducts = [
   {
@@ -55,6 +56,11 @@ const applications = [
 const ProductDiesel = () => {
   return (
     <Layout>
+      <SEO
+        title="Дизельное топливо оптом — Летнее, зимнее, арктическое Евро-5"
+        description="Купить дизельное топливо оптом: ДТ-Л, ДТ-З, ДТ-А класса Евро-5. ГОСТ 305-2013, прямые поставки с НПЗ по всей России."
+        keywords="дизельное топливо оптом, ДТ-Л, ДТ-З, ДТ-А, дизель Евро-5, купить дизтопливо"
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

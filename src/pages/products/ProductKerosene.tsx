@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Plane, CheckCircle, Thermometer, Droplets, ArrowLeft, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RequestModal } from "@/components/RequestModal";
+import { SEO } from "@/components/SEO";
 
 const keroseneProducts = [
   {
@@ -52,6 +53,11 @@ const applications = [
 const ProductKerosene = () => {
   return (
     <Layout>
+      <SEO
+        title="Авиационный керосин оптом — ТС-1, РТ, Jet A-1"
+        description="Купить авиакеросин оптом: ТС-1, РТ, Jet A-1. ГОСТ 10227-2013, поставки для гражданской и военной авиации."
+        keywords="авиакеросин оптом, ТС-1, РТ, Jet A-1, авиационное топливо, купить керосин"
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

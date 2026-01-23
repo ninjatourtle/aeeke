@@ -1,5 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { TrendingUp } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const financials = [
   { label: "Выручка 2024", value: "12.5 млрд ₽", change: "+18%" },
@@ -11,6 +12,11 @@ const financials = [
 const Investors = () => {
   return (
     <Layout>
+      <SEO
+        title="Инвесторам — Финансовые показатели АО Энерджи Констракшн"
+        description="Финансовая информация для инвесторов и акционеров. Выручка 12,5 млрд ₽, объём поставок 500 000 тонн в год."
+        keywords="инвесторам, финансовые показатели, акционерам, Энерджи Констракшн"
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

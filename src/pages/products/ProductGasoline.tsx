@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Flame, CheckCircle, Droplets, Gauge, ArrowLeft, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RequestModal } from "@/components/RequestModal";
+import { SEO } from "@/components/SEO";
 
 const gasolineProducts = [
   {
@@ -52,6 +53,11 @@ const applications = [
 const ProductGasoline = () => {
   return (
     <Layout>
+      <SEO
+        title="Бензин оптом — АИ-92, АИ-95, АИ-98 класса Евро-5"
+        description="Купить бензин оптом: АИ-92, АИ-95, АИ-98 класса Евро-5. ГОСТ 32513-2013, прямые поставки с НПЗ по всей России."
+        keywords="бензин оптом, АИ-92, АИ-95, АИ-98, бензин Евро-5, купить бензин"
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 section-dark-2">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
