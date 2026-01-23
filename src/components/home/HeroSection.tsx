@@ -50,6 +50,7 @@ export function HeroSection() {
             <RequestModal
               title="Получить коммерческое предложение"
               description="Оставьте заявку, и мы подготовим для вас индивидуальное коммерческое предложение"
+              formType="Запрос КП (кнопка на главной)"
               trigger={
                 <Button
                   size="lg"
