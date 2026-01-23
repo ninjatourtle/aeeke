@@ -102,11 +102,11 @@ export function Header() {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:+78127209767,220"
+              href="tel:+78127209767"
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span>+7 (812) 720-97-67, доб. 220</span>
+              <span>+7 (812) 720-97-67</span>
             </a>
             <RequestModal
               trigger={
