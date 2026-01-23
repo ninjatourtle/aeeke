@@ -47,10 +47,10 @@ export function ContactSection() {
                     Бесплатная линия
                   </div>
                   <a
-                    href="tel:+78127209767"
+                    href="tel:+78127209767,220"
                     className="text-lg font-semibold text-foreground hover:text-primary transition-colors"
                   >
-                    +7 (812) 720-97-67
+                    +7 (812) 720-97-67, доб. 220
                   </a>
                 </div>
               </div>
