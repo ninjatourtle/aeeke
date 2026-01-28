@@ -13,7 +13,7 @@ const offices = [
   {
     city: "Санкт-Петербург",
     address: "пер. Зеленков, д. 7а литер 3, помещ. 5-н офис 104",
-    phone: "+7 (812) 720-97-67",
+    phone: "+7 (812) 218-03-00",
     email: "info@aoec.ru",
     hours: "Пн-Пт: 9:00 - 18:00",
     isMain: true,
@@ -70,7 +70,7 @@ const Contacts = () => {
     <Layout>
       <SEO
         title="Контакты — АО «ЭК» | Санкт-Петербург"
-        description="Свяжитесь с нами для заказа нефтепродуктов. Адрес: Санкт-Петербург, пер. Зеленков, д. 7а. ☎ +7 (812) 720-97-67, доб. 220, info@aoec.ru"
+        description="Свяжитесь с нами для заказа нефтепродуктов. Адрес: Санкт-Петербург, пер. Зеленков, д. 7а. ☎ +7 (812) 218-03-00, info@aoec.ru"
         keywords="контакты АО ЭК, телефон, адрес, заказать топливо"
       />
       {/* Hero Section */}
@@ -102,8 +102,8 @@ const Contacts = () => {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Основной телефон</p>
-                <a href="tel:+78127209767" className="text-2xl font-bold text-foreground hover:text-primary transition-colors">
-                  +7 (812) 720-97-67
+              <a href="tel:+78122180300" className="text-2xl font-bold text-foreground hover:text-primary transition-colors">
+                  +7 (812) 218-03-00
                 </a>
               </div>
             </div>

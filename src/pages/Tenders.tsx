@@ -244,8 +244,8 @@ const Tenders = () => {
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-sm text-muted-foreground mb-2">Телефон</p>
-                <a href="tel:+78127209767,220" className="text-lg font-semibold text-foreground hover:text-primary transition-colors">
-                  +7 (812) 720-97-67, доб. 220
+                <a href="tel:+78122180300" className="text-lg font-semibold text-foreground hover:text-primary transition-colors">
+                  +7 (812) 218-03-00
                 </a>
               </div>
               <div className="p-6 rounded-2xl bg-card/80 backdrop-blur-sm border border-border">

@@ -173,10 +173,10 @@ const ProductDiesel = () => {
                   </Button>
                 }
               />
-              <a href="tel:+78127209767">
+              <a href="tel:+78122180300">
                 <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
                   <Phone className="w-4 h-4 mr-2" />
-                  +7 (812) 720-97-67
+                  +7 (812) 218-03-00
                 </Button>
               </a>
             </div>

@@ -99,7 +99,7 @@ const Privacy = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   По вопросам, связанным с обработкой персональных данных, вы можете обратиться 
                   по адресу электронной почты: <a href="mailto:info@aoec.ru" className="text-primary hover:underline">info@aoec.ru</a> 
-                  или по телефону: <a href="tel:+78127209767" className="text-primary hover:underline">+7 (812) 720-97-67</a>.
+                  или по телефону: <a href="tel:+78122180300" className="text-primary hover:underline">+7 (812) 218-03-00</a>.
                 </p>
               </section>
             </div>
