@@ -106,7 +106,7 @@ export function Header() {
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span>+7 (812) 720-97-67</span>
+              <span>+7 (812) 218-03-00</span>
             </a>
             <RequestModal
               trigger={
